@@ -1,4 +1,5 @@
-FROM misskey/misskey:2023.12.2 as misskey
+ARG MISSKEY_VERSION
+FROM misskey/misskey:${MISSKEY_VERSION} as misskey
 
 FROM node:20.10.0-slim as jq
 RUN apt update && apt install -y jq
