@@ -30,8 +30,8 @@ jobs:
             type=raw,value=${{ env.MISSKEY_VERSION }}
             type=raw,value=latest
       - uses: docker/build-push-action@v5
-        tags: ${{ steps.meta.outputs.tags }}
-        build-args: |
-          MISSKEY_VERSION=${{ env.MISSKEY_VERSION }}
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+        with:
+          tags: ${{ steps.meta.outputs.tags }}
+          build-args: MISSKEY_VERSION=${{ env.MISSKEY_VERSION }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
