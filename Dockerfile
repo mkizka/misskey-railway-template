@@ -5,4 +5,3 @@ RUN mkdir railway \
 RUN railway/jq '.scripts.migrateandstart = "node railway/index.js && " + .scripts.migrateandstart' package.json > package.json.tmp \
   && mv package.json.tmp package.json
 COPY dist/index.js railway/index.js
-CMD ["bash", "/start.sh"]
