@@ -8,7 +8,7 @@ fs.mkdirSync(".config", { recursive: true });
 fs.writeFileSync(".config/default.yml", config);
 console.log(
   JSON.stringify({
-    msg: "Create default.yml from environment variables",
+    msg: "Successfully created config file to .config/default.yml",
     config: misskeyEnv,
   }),
 );
