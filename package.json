@@ -1,0 +1,13 @@
+{
+  "name": "misskey-railway-template",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.11",
+    "js-yaml": "^4.1.0",
+    "read-env": "^2.0.0"
+  }
+}
