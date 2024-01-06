@@ -4,6 +4,6 @@ build({
   entryPoints: ["./src/index.js"],
   bundle: true,
   outdir: "dist",
-  platform: "node", 
+  platform: "node",
   minify: true,
 });

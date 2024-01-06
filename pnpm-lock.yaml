@@ -6,14 +6,19 @@ settings:
 
 dependencies:
   esbuild:
-    specifier: ^0.19.11
+    specifier: 0.19.11
     version: 0.19.11
   js-yaml:
-    specifier: ^4.1.0
+    specifier: 4.1.0
     version: 4.1.0
   read-env:
-    specifier: ^2.0.0
+    specifier: 2.0.0
     version: 2.0.0
+
+devDependencies:
+  prettier:
+    specifier: 3.1.1
+    version: 3.1.1
 
 packages:
 
@@ -277,6 +282,12 @@ packages:
     dependencies:
       argparse: 2.0.1
     dev: false
+
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /read-env@2.0.0:
     resolution: {integrity: sha512-gCuo85JH2aWt23HVeFzUUhpLzCRtc9O0jjvpMDG/3vue2aOp7/XllAQjSyL8xGqBifGNYbnWLE0PAqi4AWMBlA==}
