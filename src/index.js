@@ -2,8 +2,8 @@ const { readEnv } = require("read-env");
 const yaml = require("js-yaml");
 const fs = require("fs");
 
-const misskeyEnv = readEnv("MISSKEY", { separator: "_" })
+const misskeyEnv = readEnv("MISSKEY")
 const config = yaml.dump(misskeyEnv);
-console.log(config);
 fs.mkdirSync(".config", { recursive: true });
 fs.writeFileSync(".config/default.yml", config);
+console.log({ msg: "Create default.yml from environment variables", config: misskeyEnv });

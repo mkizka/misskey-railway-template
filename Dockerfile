@@ -1,7 +1,16 @@
-FROM misskey/misskey:2023.12.2
-RUN mkdir railway \
-  && curl -o railway/jq -kL https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux64 \
-  && chmod +x railway/jq
-RUN railway/jq '.scripts.migrateandstart = "node railway/index.js && " + .scripts.migrateandstart' package.json > package.json.tmp \
+FROM misskey/misskey:2023.12.2 as misskey
+
+FROM node:20.10.0-slim as jq
+RUN apt update && apt install -y jq
+COPY --from=misskey /misskey/package.json ./
+RUN jq '.scripts.migrateandstart = "node /railway/index.js && " + .scripts.migrateandstart' package.json > package.json.tmp \
   && mv package.json.tmp package.json
-COPY dist/index.js railway/index.js
+
+FROM node:20.10.0-slim as build
+COPY . .
+RUN corepack enable pnpm && pnpm i
+RUN pnpm build
+
+FROM misskey
+COPY --from=jq package.json ./
+COPY --from=build dist/index.js /railway/
