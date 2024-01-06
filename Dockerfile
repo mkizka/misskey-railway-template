@@ -4,4 +4,4 @@ RUN mkdir railway \
   && chmod +x railway/jq
 RUN railway/jq '.scripts.migrateandstart = "node railway/index.js && " + .scripts.migrateandstart' package.json > package.json.tmp \
   && mv package.json.tmp package.json
-COPY ./dist/index.js railway/index.js
+COPY dist/index.js railway/index.js
