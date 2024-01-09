@@ -15,7 +15,7 @@ This is a template for deploying Misskey on [Railway](https://railway.app).
 Set the environment variables as needed. If there is nothing you want to change, you don't need to do anything.
 
 <details>
-<summary>For those who want to change</summary>
+<summary>For those who want to change settings</summary>
 Misskey uses a yml file for configuration, but this template allows the use of environment variables with a custom Docker image.
 
 In this Docker image, a yml file is generated at container startup based on the environment variables prefixed with `MISSKEY`.
