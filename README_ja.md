@@ -3,6 +3,8 @@
 # misskey-railway-template
 [Railway](https://railway.app)でMisskeyをデプロイするためのテンプレートです。
 
+![](./images/deploy.gif)
+
 ## 使用方法
 
 ### 1. Deploy on Railwayをクリック
@@ -57,6 +59,16 @@ db:
 以上で完了です！
 
 ![](images/setup3.png)
+
+## トラブルシューティング
+![](images/trouble.png)
+
+このようなメッセージが表示されることがあります。
+
+- 少し待ってからリロード
+- Redeploy
+
+で解決することがあります。
 
 ## ⚠️⚠️注意⚠️⚠️
 - Misskeyを使い始めた後、ドメインを変更しないでください。

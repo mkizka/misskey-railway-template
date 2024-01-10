@@ -3,6 +3,8 @@
 # misskey-railway-template
 This is a template for deploying Misskey on [Railway](https://railway.app).
 
+![](./images/deploy.gif)
+
 ## How to Use
 
 ### 1. Click on 'Deploy on Railway'
@@ -56,6 +58,16 @@ The URL will be displayed in the 'Deployments' section as shown below.
 That's it!
 
 ![](images/setup3.png)
+
+## Troubleshooting
+![](images/trouble.png)
+
+You may encounter a message like this.
+
+- Try waiting a bit and then reload
+- Redeploy
+
+These actions can sometimes resolve the issue.
 
 ## ⚠️⚠️Caution⚠️⚠️
 - After starting to use Misskey, please do not change the domain.
