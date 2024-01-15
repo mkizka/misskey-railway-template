@@ -3,6 +3,8 @@
 # misskey-railway-template
 [Railway](https://railway.app)でMisskeyをデプロイするためのテンプレートです。
 
+**注意: このテンプレートはHobbyプラン以上でのみ動作します。**
+
 ![](./images/deploy.gif)
 
 ## 使用方法
