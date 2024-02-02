@@ -75,3 +75,6 @@ These actions can sometimes resolve the issue.
 - After starting to use Misskey, please do not change the domain.
 - Uploaded images are stored in the mounted volume. The volume capacity is 5GB, so it is recommended to set up S3 or similar from the start if needed.
 - Railway charges based on usage, so please do not increase your followers excessively. [You can also set limits on usage from the settings.](https://docs.railway.app/reference/usage-limits)
+
+## Icon
+The icon is copied from [misskey-dev/assets](https://github.com/misskey-dev/assets/blob/81499387376c00cf7d287a179d15ba2988b5c7eb/public/icon.png).

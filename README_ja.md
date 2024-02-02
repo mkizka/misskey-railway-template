@@ -76,3 +76,6 @@ db:
 - Misskeyを使い始めた後、ドメインを変更しないでください。
 - アップロードした画像はマウントされたボリュームに保存されます。ボリュームの容量は5GBのため、必要に応じてS3などを最初から設定しておくことをおすすめします。
 - Railwayは使用量に応じて課金されるため、フォローを増やしすぎないでください。[設定から使用量を制限することも出来ます。](https://docs.railway.app/reference/usage-limits)
+
+## アイコン
+[misskey-dev/assets](https://github.com/misskey-dev/assets/blob/81499387376c00cf7d287a179d15ba2988b5c7eb/public/icon.png) のpublicディレクトリのファイルをコピーして使用しています。
