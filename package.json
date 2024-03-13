@@ -3,16 +3,11 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "build": "node build.js",
-    "format": "prettier --write ."
+    "build": "node build.js"
   },
   "dependencies": {
     "esbuild": "0.20.1",
     "js-yaml": "4.1.0",
     "read-env": "2.0.0"
-  },
-  "devDependencies": {
-    "prettier": "3.2.5"
-  },
-  "packageManager": "pnpm@8.15.4"
+  }
 }

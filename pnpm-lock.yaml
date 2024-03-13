@@ -15,11 +15,6 @@ dependencies:
     specifier: 2.0.0
     version: 2.0.0
 
-devDependencies:
-  prettier:
-    specifier: 3.2.5
-    version: 3.2.5
-
 packages:
 
   /@esbuild/aix-ppc64@0.20.1:
@@ -282,12 +277,6 @@ packages:
     dependencies:
       argparse: 2.0.1
     dev: false
-
-  /prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
 
   /read-env@2.0.0:
     resolution: {integrity: sha512-gCuo85JH2aWt23HVeFzUUhpLzCRtc9O0jjvpMDG/3vue2aOp7/XllAQjSyL8xGqBifGNYbnWLE0PAqi4AWMBlA==}
