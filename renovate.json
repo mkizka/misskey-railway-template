@@ -2,5 +2,23 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "automerge": true,
+  "platformAutomerge": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["deploy.yml$"],
+      "matchStrings": ["MISSKEY_VERSION: (?<currentValue>.*?)\\n"],
+      "depNameTemplate": "misskey/misskey",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^compose.yaml$"],
+      "matchStrings": ["MISSKEY_VERSION=(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "misskey/misskey",
+      "datasourceTemplate": "docker"
+    }
   ]
 }

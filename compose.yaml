@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  misskey:
+    build:
+      context: .
+      args:
+        - MISSKEY_VERSION=2024.2.0
+    environment:
+      - MISSKEY__URL=https://misskey.localhost
+      - MISSKEY__DB__HOST=db
+      - MISSKEY__DB__USER=postgres
+      - MISSKEY__DB__PASS=password
+      - MISSKEY__DB__DB=postgres
+      - MISSKEY__REDIS__HOST=redis
+      - MISSKEY__REDIS__PASS=
+      - MISSKEY__ID=aidx
+      - MISSKEY__PORT=3000
+    ports:
+      - 3000:3000
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  db:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 2s
+      timeout: 2s
+      retries: 10
+  redis:
+    image: redis:7-alpine
