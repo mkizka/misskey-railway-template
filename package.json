@@ -6,7 +6,7 @@
     "build": "node build.js"
   },
   "dependencies": {
-    "esbuild": "0.21.1",
+    "esbuild": "0.21.2",
     "js-yaml": "4.1.0",
     "read-env": "2.0.0"
   }
