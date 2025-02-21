@@ -10,7 +10,9 @@ RUN jq '.scripts.migrateandstart = "node /railway/index.js && " + .scripts.migra
 
 FROM base as build
 COPY . .
-RUN corepack enable pnpm && pnpm i
+RUN npm i -g corepack@latest \
+  && corepack enable pnpm \
+  && pnpm i
 RUN pnpm build
 
 FROM misskey
