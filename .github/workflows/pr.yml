@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: docker compose up -d
       - run: npx wait-on http://localhost:3000 -t 30s
       - run: docker compose logs misskey --tail=100
