@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        - MISSKEY_VERSION=2025.7.0
+        - MISSKEY_VERSION=2025.8.0
     environment:
       - MISSKEY__URL=https://misskey.localhost
       - MISSKEY__DB__HOST=db
