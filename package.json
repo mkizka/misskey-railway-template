@@ -10,5 +10,5 @@
     "js-yaml": "5.2.1",
     "read-env": "2.0.0"
   },
-  "packageManager": "pnpm@10.34.4"
+  "packageManager": "pnpm@11.9.0"
 }
