@@ -13,7 +13,7 @@ jobs:
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: mkizka/misskey-railway
-      MISSKEY_VERSION: 2026.6.0
+      MISSKEY_VERSION: 2026.7.0
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: docker/login-action@v4.6.0
