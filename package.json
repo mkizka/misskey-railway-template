@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "esbuild": "0.28.2",
-    "js-yaml": "5.4.0",
+    "js-yaml": "5.4.1",
     "read-env": "2.0.0"
   },
   "packageManager": "pnpm@10.34.5"
