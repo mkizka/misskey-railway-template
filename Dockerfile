@@ -1,6 +1,6 @@
 ARG MISSKEY_VERSION
 FROM misskey/misskey:${MISSKEY_VERSION} as misskey
-FROM node:24.22.1-slim as base
+FROM node:26.12.1-slim as base
 
 FROM base as jq
 RUN apt update && apt install -y jq
